@@ -1,7 +1,7 @@
 # GraphPrufferCodes
 
-from-scratch real-time random tree embedding with Pruffer code generation
+Graphs shaped like topological spaces.
 
-ToDo: clean up directory, `make into react component
+ToDo: could re-make UI after learning more of React
 
-https://melnykeugene.github.io/GraphPrufferCodes/
+https://melnykeugene.github.io/graphs/
