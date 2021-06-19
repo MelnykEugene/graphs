@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pruffer codes</title>
+    <link rel="stylesheet" type="text/css" href="438f3daa8d605e96421f9a3a6805c420">
+    <link rel="preconnect" href="d7c2b8c89e8843c0697300fa104dd24b">
+    <link href="d54ec98a4822a54ee2e872b85b38eb15" rel="stylesheet">
+  </head>
+  <body>
+    <div id="controls">
+      <p>double click to reset camera</p>
+      <span><input type="checkbox" id="degree" onclick="onDegree();"> Degree
+        <input type="checkbox" id="node_id" onclick="onNodeId();"> Node
+        ID</span>
+
+      <select name="mode" id="shape" class="controls">
+        <option value="solid_cube">Solid Cube</option>
+        <option value="mobius">Mobius Strip</option>
+        <option value="klein">Klein Bottle</option>
+      </select>
+    </div>
+
+    <canvas id="myCanvas" width="1680" height="1050"></canvas>
+    <script src="ad96325dc557090d8a9f76a60067201c"></script>
+  </body>
+</html>

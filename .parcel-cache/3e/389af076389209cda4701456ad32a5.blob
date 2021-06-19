@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pruffer codes</title>
+    <link rel="stylesheet" type="text/css" href="438f3daa8d605e96421f9a3a6805c420">
+    <link rel="preconnect" href="d7c2b8c89e8843c0697300fa104dd24b">
+    <link href="d54ec98a4822a54ee2e872b85b38eb15" rel="stylesheet">
+  </head>
+  <body>
+    <div id="controls">
+      <p>double click to reset camera</p>
+
+      <span id="radios">
+        <input type="checkbox" id="degree" onclick="onDegree();"> Degree &nbsp
+        &nbsp &nbsp
+        <input type="checkbox" id="node_id" onclick="onNodeId();"> Node ID
+      </span>
+
+      <select name="mode" id="shape" class="controls" onchange="modeChanger();">
+        <option value="square">Square</option>
+        <option value="sheet">Sheet</option>
+        <option value="cylinder">Cylinder</option>
+        <option value="torus" selected="">Torus</option>
+        <option value="klein">Klein Bottle</option>
+        <option value="mobius">Mobius Strip</option>
+        <option value="solid_cube">Solid Cube</option>
+      </select>
+      <input type="range" min="1" max="30" value="10" class="slider" id="width_slider">
+      <input type="range" min="1" max="30" value="10" class="slider" id="height_slider">
+      <button class="controls" id="restart" onclick="()=>{generate()}">
+        restart
+      </button>
+    </div>
+    <canvas id="myCanvas"></canvas>
+    <script src="ad96325dc557090d8a9f76a60067201c"></script>
+  </body>
+</html>

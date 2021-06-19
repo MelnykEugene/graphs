@@ -1,0 +1,38 @@
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+var _nodeJs = require("./node.js");
+var _nodeJsDefault = _parcelHelpers.interopDefault(_nodeJs);
+var _edgeJs = require("./edge.js");
+var _edgeJsDefault = _parcelHelpers.interopDefault(_edgeJs);
+class Graph {
+  constructor() {
+    this.nodes = [];
+    this.edges = [];
+    this.neighbors = Map();
+    this.degrees = Map();
+  }
+  generateSquare(n) {
+    for (let i = 0; i < n; i++) {
+      for (let j = 0; j < n; j++) {
+        let node = addVertex();
+        if (j - 1 >= 0) this.addEdge();
+      }
+    }
+  }
+  nextId() {
+    if (this.nodes.length == 0) return 0; else return this.nodes[this.nodes.length - 1].id + 1;
+  }
+  addVertex() {
+    this.nodes.push(_nodeJsDefault.default(this.nextId));
+  }
+  addEdge(u, v) {
+    this.edges.push(_edgeJsDefault.default(u, v));
+    if (typeof this.neighbors[u] == "undefined") {
+      this.neighbors[u] = [v];
+    } else this.neighbors[u].push(v);
+    if (typeof this.neighbors[v] == "undefined") {
+      this.neighbors[u] = [u];
+    } else this.neighbors[u].push(u);
+  }
+}
+exports.default = Graph;

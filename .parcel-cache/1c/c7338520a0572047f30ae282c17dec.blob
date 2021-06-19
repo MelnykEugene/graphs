@@ -1,0 +1,28 @@
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+require("./node.js");
+require("./edge.js");
+class Graph {
+  constructor() {
+    this.nodes = [];
+    this.edges = [];
+    this.neighbors = Map();
+    this.degrees = Map();
+  }
+  generateSquare(n) {
+    for (let i = 0; i < n; i++) {
+      for (let j = 0; j < n; j++) {
+        let node = addVertex();
+        if (j - 1 >= 0) this.addEdge();
+      }
+    }
+  }
+  nextId() {
+    if (this.nodes.length == 0) return 0; else return this.nodes[this.nodes.length - 1].id + 1;
+  }
+  addVertex() {
+    this.nodes.push(this.nextId());
+  }
+  addEdge(u, v) {}
+}
+exports.default = Graph;

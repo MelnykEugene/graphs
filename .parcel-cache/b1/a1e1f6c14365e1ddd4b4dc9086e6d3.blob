@@ -1,0 +1,45 @@
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+require("./node.js");
+require("./edge.js");
+class Graph {
+  constructor() {
+    this.nodes = [];
+    this.edges = [];
+    this.neighbors = Map();
+    this.degrees = Map();
+  }
+  generateSquare(n) {
+    for (let i = 0; i < n; i++) {
+      for (let j = 0; j < n; j++) {
+        let node = addVertex();
+        if (j - 1 >= 0) this.addEdge();
+      }
+    }
+  }
+  nextId() {
+    if (this.nodes.length == 0) return 0; else return this.nodes[this.nodes.length - 1].id + 1;
+  }
+  addVertex() {
+    this.nodes.push(this.nextId());
+  }
+  removeVertex() {
+    let indexToRemove = this.nextId() - 1;
+    this.encoding.pop();
+    for (var i = 0; i < this.nodes[indexToRemove].neighbors.length; i++) {
+      var neighbor = this.nodes[indexToRemove].neighbors[i];
+      neighbor.degree -= 1;
+      let index = neighbor.neighbors.indexOf(this.nodes[indexToRemove]);
+      neighbor.neighbors.splice(index, 1);
+    }
+    for (var i = 0; i < this.edges.length; i++) {
+      var edge = this.edges[i];
+      if (edge.node1.id == indexToRemove || edge.node2.id == indexToRemove) {
+        this.edges.splice(i, 1);
+        console.log("removed edge");
+      }
+    }
+    this.nodes.splice(indexToRemove, 1);
+  }
+}
+exports.default = Graph;
