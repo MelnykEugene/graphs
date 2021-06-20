@@ -1122,19 +1122,19 @@ modeChanger = () => {
   generate();
 };
 generate = function () {
+  console.log("a");
   if (mode == "solid_cube") graph.generateSolidCube(n);
   if (mode == "square") graph.generateSquare(n);
   if (mode == "sheet") graph.generateSheet(n, m);
   if (mode == "cylinder") graph.generateCyllinder(n, m);
-  if (mode == "torus") graph.generateTorus(n, parseInt(m));
+  if (mode == "torus") graph.generateTorus(n, m);
   if (mode == "klein") graph.generateKlein(n, m);
   if (mode == "mobius") graph.generateMobius(n, m);
 };
+modeChanger();
 var width_slider = document.getElementById("width_slider");
 var height_slider = document.getElementById("height_slider");
-n = 10;
-m = 20;
-modeChanger();
+// height_slider.disabled = "disabled";
 width_slider.oninput = function () {
   n = this.value;
   generate();
@@ -1663,4 +1663,4 @@ function reduce(graphCopy, vertex) {
 
 },{"./graph.js":"6m5hz","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}]},["1j6wU","21c8X","3L8AI"], "3L8AI", "parcelRequire513d")
 
-//# sourceMappingURL=index.2142d36c.js.map
+//# sourceMappingURL=index.HASH_REF_062e9a7565ca912a5f7d6b832142d36c.js.map
