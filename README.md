@@ -1,5 +1,5 @@
 Graphs shaped like topological spaces.
 
-ToDo: could re-make UI after learning more of React
+ToDo: enclose into react componen (handling cancelanimationframe on unmount) for future integration into portfolio
 
 https://melnykeugene.github.io/graphs/
